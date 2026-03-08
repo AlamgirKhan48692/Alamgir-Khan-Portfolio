@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -9,113 +8,70 @@
 
 <title>Alamgir Khan | AI Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Tailwind -->
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font -->
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-font-family:'Poppins',sans-serif;
-margin:0;
-background:#f5f5f5;
-color:#333;
+font-family:'Share Tech Mono', monospace;
+background:black;
+color:#00ffcc;
+overflow-x:hidden;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 40px;
-background:#111;
-color:white;
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
 }
 
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-}
-
-.hero{
-text-align:center;
-padding:80px 20px;
-background: linear-gradient(135deg,#111,#222);
-color:white;
-}
-
-.hero span{
-color:#00bcd4;
-}
-
-.btn{
-padding:10px 20px;
-background:#00bcd4;
-border:none;
-color:white;
-cursor:pointer;
-margin-top:15px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.skill{
-background:#00bcd4;
-color:white;
-padding:6px 12px;
-border-radius:5px;
-font-size:14px;
-}
-
-.experience ul{
-margin-top:10px;
-}
-
-.certificates ul{
-line-height:1.8;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.neon{
+text-shadow:0 0 10px #00ffcc,0 0 20px #00ffcc;
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 2px 6px rgba(0,0,0,0.2);
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+border:1px solid rgba(0,255,204,.3);
+transition:0.4s;
 }
 
-.project-buttons{
-margin-top:10px;
+.card:hover{
+transform:rotateY(10deg) scale(1.05);
+box-shadow:0 0 25px #00ffcc;
+}
+
+nav{
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(8px);
+border-bottom:1px solid #00ffcc33;
 }
 
 .btn-outline{
-padding:8px 14px;
-border:1px solid #00bcd4;
-background:white;
-color:#00bcd4;
-cursor:pointer;
+  padding: 10px 22px;
+  border: 2px solid #00f5d4;
+  background: transparent;
+  color: #00f5d4;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.contact{
-margin-top:40px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-color:white;
+.btn-outline:hover{
+  background: #00f5d4;
+  color: #000;
+  box-shadow: 
+    0 0 5px #00f5d4,
+    0 0 10px #00f5d4,
+    0 0 20px #00f5d4,
+    0 0 40px #00f5d4;
 }
 
 </style>
@@ -124,236 +80,339 @@ color:white;
 
 <body>
 
-<nav>
+<div id="particles-js"></div>
 
-<div class="logo">Alamgir Khan</div>
+<!-- NAVBAR -->
 
-<div>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<nav class="fixed w-full z-50">
+
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+
+<h1 class="tracking-widest neon">ALAMGIR.EXE</h1>
+
+<div class="flex gap-6 text-sm">
+
+<a href="#" class="btn-outline">HOME</a> <a href="#about" class="btn-outline">ABOUT</a> <a href="#education" class="btn-outline">EDUCATION</a> <a href="#skills" class="btn-outline">SKILLS</a> <a href="#projects" class="btn-outline">PROJECTS</a> <a href="#contact" class="btn-outline">CONTACT</a>
+
+</div>
+
 </div>
 
 </nav>
 
-<section class="hero">
+<!-- HERO -->
 
-<h1>Hi I'm <span>Alamgir Khan</span></h1>
+<section class="h-screen flex flex-col justify-center items-center text-center px-6">
 
-<p>Software Developer • AI Engineer • Data Analyst</p>
+<h1 class="text-5xl md:text-7xl font-bold neon">
+
+Hi I'm Alamgir Khan
+
+</h1>
+
+<p class="mt-6 text-green-400">
+
+<span id="typing"></span>
+
+</p>
 
 <a href="https://alamgirkhan48692.github.io/Alamgir-Khan-Portfolio/alamgir-khan-cv.pdf" target="_blank">
-<button class="btn">View CV</button>
+
+<button class="mt-6 border border-green-400 px-6 py-3 hover:bg-green-400 hover:text-black transition">
+
+VIEW CV
+
+</button>
+
 </a>
 
 </section>
 
-<div class="container">
+<!-- ABOUT -->
 
-<h2 id="about">About Me</h2>
+<section id="about" class="py-24 max-w-5xl mx-auto px-6">
 
-<p>
-Motivated software engineer with strong skills in Python,
-machine learning, and data analysis. Experienced in building
-data-driven solutions and applying AI tools to real-world
-business problems.
+<h2 class="text-3xl mb-10 neon">ABOUT ME</h2>
+
+<p class="text-green-400">
+
+Motivated software engineer skilled in Python, 
+machine learning, data analysis, and full-stack web development. 
+
+Experienced in building responsive web applications, creating data-driven solutions, 
+and applying AI technologies to solve real-world business challenges.
+
 </p>
 
-<h2>Education</h2>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education" class="py-24 max-w-5xl mx-auto px-6">
+
+<h2 class="text-3xl mb-10 neon">EDUCATION</h2>
+
+<div class="card p-8 rounded-xl">
 
 <p>
+
 Bachelor of Science in Software Engineering<br>
 Agriculture University Peshawar<br>
 Graduation Year: 2015
+
 </p>
 
-<h2 id="skills">Technical Skills</h2>
+</div>
 
-<div class="skills">
+</section>
 
-<span class="skill">Python</span> <span class="skill">Pandas</span> <span class="skill">NumPy</span> <span class="skill">Scikit-learn</span> <span class="skill">Matplotlib</span> <span class="skill">Seaborn</span> <span class="skill">HTML</span> <span class="skill">CSS</span> <span class="skill">PHP</span> <span class="skill">C++</span>
+<!-- SKILLS -->
+
+<section id="skills" class="py-24 max-w-6xl mx-auto px-6">
+
+<h2 class="text-3xl mb-10 neon">TECHNICAL SKILLS</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card p-8 rounded-xl">
+
+<h3 class="text-xl">Web Development</h3><br>
+<p>Full-stack web development using HTML, CSS, PHP, JavaScript and MySQL.</p>
+</div>
+
+<div class="card p-8 rounded-xl">
+
+<h3 class="text-xl">Artificial Intelligence</h3><br>
+<p>Machine learning and AI solutions using Python, TensorFlow, PyTorch, and Scikit-learn.</p>
 
 </div>
 
-<h2>Soft Skills</h2>
+<div class="card p-8 rounded-xl">
 
-<div class="skills">
-
-<span class="skill">Communication</span> <span class="skill">Teamwork</span> <span class="skill">Leadership</span> <span class="skill">Decision Making</span>
-
-</div>
-
-<h2>Work Experience</h2>
-
-<div class="experience">
-
-<p><strong>AI Tools Specialist</strong><br>
-NGEN (Next Generation Circle) — Peshawar, Pakistan<br>
-March 2022 – Dec 2024
-</p>
-
-<ul>
-<li>Developed automation and analytics solutions using Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn.</li>
-<li>Built machine learning models supporting internal AI workflows.</li>
-<li>Integrated AI tools to improve business productivity.</li>
-<li>Delivered internal training on Python and data analysis.</li>
-</ul>
-
-<p><strong>Software Developer & SQA Engineer</strong><br>
-Directorate of Tourist Services (DTS) — Peshawar, Pakistan<br>
-Jan 2019 – Feb 2021
-</p>
-
-<ul>
-<li>Developed web applications using HTML, CSS, JavaScript, and PHP.</li>
-<li>Designed manual and automated software testing plans.</li>
-<li>Collaborated with teams to deliver user-friendly applications.</li>
-<li>Performed performance and security testing.</li>
-</ul>
+<h3 class="text-xl">Data Analysis</h3><br>
+<p>Data visualization and analytics using Python, Pandas, NumPy, Matplotlib, and Power BI.</p>
 
 </div>
 
-<h2>Certificates</h2>
-
-<div class="certificates">
-
-<ul>
-
-<li>Python (Basic) — HackerRank | June 2025
-<a href="https://www.hackerrank.com/certificates/d581eb1b4724" target="_blank">View Certificate</a>
-</li>
-
-<li>Intro to Machine Learning — Kaggle | June 2025
-<a href="https://www.kaggle.com/learn/certification/alamgirkhan48692/intro-to-machine-learning" target="_blank">View Certificate</a>
-</li>
-
-<li>Scientific Computing with Python — FreeCodeCamp | May 2025
-<a href="https://www.freecodecamp.org/certification/Alamgir_khan/scientific-computing-with-python-v7" target="_blank">View Certificate</a>
-</li>
-
-<li>Data Analysis with Python — FreeCodeCamp | June 2025
-<a href="https://www.freecodecamp.org/certification/Alamgir_khan/data-analysis-with-python-v7" target="_blank">View Certificate</a>
-</li>
-
-<li>Pandas — Kaggle | June 2025
-<a href="https://www.kaggle.com/learn/certification/alamgirkhan48692/pandas" target="_blank">View Certificate</a>
-</li>
-
-<li>Data Visualization — FreeCodeCamp | June 2025
-<a href="https://www.freecodecamp.org/certification/Alamgir_khan/data-visualization" target="_blank">View Certificate</a>
-</li>
-
-</ul>
-
 </div>
 
-<h2 id="projects">Projects</h2>
+</section>
 
-<div class="projects">
+<!-- PROJECTS -->
 
-<div class="card">
+<section id="projects" class="py-24 px-6">
+
+<h2 class="text-3xl text-center mb-12 neon">
+
+DEPLOYED MISSIONS
+
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+<div class="card p-8 rounded-xl">
+
 <h3>Insaf AK LPG Admin Panel</h3>
 <p>Web-based admin dashboard for managing LPG sales, stock, and expenditure with secure login authentication.</p>
+<br>
+
+<div class="project-buttons">
 
 <a href="https://insaflpg.kesug.com/login.php" target="_blank">
-<button class="btn">Live Demo</button>
-</a>
+<h3>Click for  ⇒ <button class="btn-outline">Live Demo</button></h3>
 
+</a>
+<br>
 <a href="https://github.com/AlamgirKhan48692" target="_blank">
-<button class="btn-outline">GitHub</button>
+
+<h3>Click for  ⇒ <button class="btn-outline">View Code GitHub</button></h3>
 </a>
 </div>
 
-<div class="card">
+</div>
+
+<div class="card p-8 rounded-xl">
+
 <h3>Emotion Detection AI</h3>
 <p>Deep learning CNN model detecting emotions using FER2013 dataset.</p>
-
+<br><br><br>
+<div class="project-buttons">
 <a href="https://emotion-detection-ai-alamgir.streamlit.app" target="_blank">
-<button class="btn">Live Demo</button>
+<h3>Click for  ⇒ <button class="btn-outline">Live Demo</button></h3>
 </a>
-
+<br>
 <a href="https://github.com/AlamgirKhan48692/emotion-detection-ai" target="_blank">
-<button class="btn-outline">GitHub</button>
+<h3>Click for  ⇒ <button class="btn-outline">View Code GitHub</button></h3>
 </a>
 </div>
 
-<div class="card">
+</div>
+
+<div class="card p-8 rounded-xl">
+
 <h3>Bitcoin Price Prediction</h3>
 <p>Machine learning model predicting Bitcoin price using Linear Regression.</p>
-
+<br><br>
+<div class="project-buttons">
 <a href="https://yqhhc2pgpyktsjbvy3cbli.streamlit.app" target="_blank">
-<button class="btn">Live Demo</button>
+<h3>Click for  ⇒ <button class="btn-outline">Live Demo</button></h3>
 </a>
-
+<br>
 <a href="https://github.com/AlamgirKhan48692/Bitcoin-Price-Prediction-using-Linear-Regression" target="_blank">
-<button class="btn-outline">GitHub</button>
+<h3>Click for  ⇒ <button class="btn-outline">View Code GitHub</button></h3>
 </a>
 </div>
 
-<div class="card">
+</div>
+
+<div class="card p-8 rounded-xl">
+
 <h3>Titanic Survival Prediction</h3>
 <p>Machine learning model predicting survival using Logistic Regression.</p>
-
+<br>
+<div class="project-buttons">
 <a href="https://titanic-survival-prediction-project-fmnrzgmkvwcd8f6gpe5sgn.streamlit.app" target="_blank">
-<button class="btn">Live Demo</button>
+<h3>Click for  ⇒ <button class="btn-outline">Live Demo</button></h3>
 </a>
-
+<br>
 <a href="https://github.com/AlamgirKhan48692/Titanic-Survival-Prediction-Project" target="_blank">
-<button class="btn-outline">GitHub</button>
+<h3>Click for  ⇒ <button class="btn-outline">View Code GitHub</button></h3>
 </a>
 </div>
+</div>
+<div class="card p-8 rounded-xl">
 
-<div class="card">
 <h3>Medical Data Visualizer</h3>
 <p>Data analysis project using categorical plots and heatmaps.</p>
-
+<br><br>
+<div class="project-buttons">
 <a href="https://medical-data-visualizer-brmhrdgpuntyra2snp8hav.streamlit.app" target="_blank">
-<button class="btn">Live Demo</button>
+<h3>Click for  ⇒ <button class="btn-outline">Live Demo</button></h3>
 </a>
-
+<br>
 <a href="https://github.com/AlamgirKhan48692/medical-data-visualizer" target="_blank">
-<button class="btn-outline">GitHub</button>
+<h3>Click for  ⇒ <button class="btn-outline">View Code GitHub</button></h3>
 </a>
 </div>
 
-<div class="card">
+</div>
+<div class="card p-8 rounded-xl">
+
 <h3>Sea Level Predictor</h3>
 <p>Linear regression model predicting sea level rise until 2050.</p>
-
+<br><br>
+<div class="project-buttons">
 <a href="https://sea-level-predictor-bxha3gfvjlbswtbgqyztzp.streamlit.app" target="_blank">
-<button class="btn">Live Demo</button>
+<h3>Click for  ⇒ <button class="btn-outline">Live Demo</button></h3>
 </a>
-
+<br>
 <a href="https://github.com/AlamgirKhan48692/Sea-Level-Predictor" target="_blank">
-<button class="btn-outline">GitHub</button>
+<h3>Click for  ⇒ <button class="btn-outline">View Code GitHub</button></h3>
 </a>
 </div>
 
 </div>
+</div>
 
-<div id="contact" class="contact">
 
-<h2>Contact</h2>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="py-24 max-w-4xl mx-auto px-6 text-center">
+
+<h2 class="text-3xl mb-10 neon">CONTACT</h2>
 
 <p>Email: alamgirkhan48692@gmail.com</p>
 <p>Phone: 03005348692</p>
 
-<p>
-<a href="https://github.com/AlamgirKhan48692">GitHub</a> |
-<a href="https://linkedin.com">LinkedIn</a> |
-<a href="https://www.kaggle.com/alamgirkhan48692">Kaggle</a>
+<p class="mt-4">
+
+<a href="https://github.com/AlamgirKhan48692" class="btn-outline">GitHub</a> | <a href="https://linkedin.com" class="btn-outline">LinkedIn</a> | <a href="https://www.kaggle.com/alamgirkhan48692" class="btn-outline">Kaggle</a>
+
 </p>
 
-</div>
+</section>
 
-</div>
+<footer class="text-center py-10 border-t border-green-400/30">
 
-<footer>
-
-<p>© 2026 Alamgir Khan</p>
+© 2026 Alamgir Khan
 
 </footer>
+
+<script>
+
+/* typing animation */
+
+const text = [
+"Software Developer",
+"AI Engineer",
+"Data Analyst"
+]
+
+let i = 0
+let j = 0
+let current = ""
+let isDeleting = false
+
+function type(){
+
+current = text[i]
+
+if(!isDeleting){
+j++
+}else{
+j--
+}
+
+document.getElementById("typing").textContent = current.substring(0,j)
+
+if(!isDeleting && j === current.length){
+isDeleting = true
+setTimeout(type,1200)
+return
+}
+
+if(isDeleting && j === 0){
+isDeleting = false
+i++
+if(i === text.length){
+i = 0
+}
+}
+
+setTimeout(type,isDeleting ? 50 : 120)
+
+}
+
+type()
+
+/* particles background */
+
+particlesJS("particles-js",{
+
+particles:{
+number:{value:80},
+color:{value:"#00ffcc"},
+shape:{type:"circle"},
+opacity:{value:0.5},
+size:{value:3},
+line_linked:{
+enable:true,
+distance:150,
+color:"#00ffcc",
+opacity:0.3,
+width:1
+},
+move:{
+enable:true,
+speed:2
+}
+}
+
+})
+
+</script>
 
 </body>
 </html>
