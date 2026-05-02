@@ -12,7 +12,7 @@ I enjoy building data-driven solutions and applying AI technologies to solve rea
 
 You can view my portfolio here:
 
-https://yourusername.github.io/portfolio
+[https://yourusername.github.io/portfolio](https://alamgirkhan48692.github.io/Alamgir-Khan-Portfolio/)
 
 ## Projects
 
